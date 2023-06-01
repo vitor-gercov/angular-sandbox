@@ -1,0 +1,9 @@
+main {
+    margin: 2.5rem 2.5rem 0;
+}
+
+@media(min-width: 700px) {
+    main {
+        margin: 2.5rem 5rem 0;
+    }
+}

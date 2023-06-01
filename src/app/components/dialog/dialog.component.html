@@ -1,0 +1,9 @@
+<dialog #dialog class="dialog__container">
+    <header class="dialog__header">
+        <h2 class="dialog__header__title">{{title}}</h2>
+        <app-icon-button (click)="close()">close</app-icon-button>
+    </header>
+    <section>
+        <ng-content></ng-content>
+    </section>
+</dialog>

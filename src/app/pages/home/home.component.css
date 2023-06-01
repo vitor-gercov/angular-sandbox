@@ -1,0 +1,39 @@
+.home__section {
+    margin-top: 3rem;
+}
+
+.home__project-introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.home__project-sections__navigator {
+    display: flex;
+    flex-direction: column;
+}
+
+.home__project-sections__navigator *:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+@media(min-width: 500px) {
+    .home__project-introduction {
+        margin-right: 25%;
+    }
+
+    .home__project-sections__navigator {
+        flex-direction: row;
+    }
+
+    .home__project-sections__navigator *:not(:last-child) {
+        margin-right: 1rem;
+    }
+}
+
+@media(min-width: 700px) {
+
+    .home__project-introduction {
+        margin-right: 50%;
+    }
+}
