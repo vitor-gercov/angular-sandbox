@@ -2,6 +2,12 @@
     font-size: 2rem;
 }
 
+.home__introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
 .home__project-description {
     font-size: 1.2rem;
     line-height: 2rem;
@@ -11,8 +17,15 @@ section {
     margin-top: 3rem;
 }
 
+@media(min-width: 500px) {
+    .home__introduction {
+        margin-right: 25%;
+    }
+}
+
 @media(min-width: 700px) {
-    .home__project-description {
+
+    .home__introduction {
         margin-right: 50%;
     }
 }
