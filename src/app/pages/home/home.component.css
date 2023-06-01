@@ -1,0 +1,18 @@
+.home__project-title {
+    font-size: 2rem;
+}
+
+.home__project-description {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+section {
+    margin-top: 3rem;
+}
+
+@media(min-width: 700px) {
+    .home__project-description {
+        margin-right: 50%;
+    }
+}

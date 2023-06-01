@@ -8,6 +8,18 @@ export const appRoutes: Routes = [
         }
     },
     {
+        path: 'custom-components',
+        loadChildren: () => {
+            return import('./pages/custom-components/custom-components.module').then((customComponentsModuleFile) => customComponentsModuleFile.CustomComponentsModule)
+        }
+    },
+    {
+        path: 'about',
+        loadChildren: () => {
+            return import('./pages/about/about.module').then((aboutModuleFile) => aboutModuleFile.AboutModule)
+        }
+    },
+    {
         path: '**',
         redirectTo: '',
         pathMatch: 'full'
