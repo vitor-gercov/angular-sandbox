@@ -1,7 +1,3 @@
-.home__project-title {
-    font-size: 2rem;
-}
-
 .home__section {
     margin-top: 3rem;
 }
@@ -10,11 +6,6 @@
     display: flex;
     flex-direction: column;
     align-items: end;
-}
-
-.home__project-description {
-    font-size: 1.2rem;
-    line-height: 2rem;
 }
 
 .home__project-sections__navigator {
