@@ -8,15 +8,21 @@ export const appRoutes: Routes = [
         }
     },
     {
+        path: 'about',
+        loadChildren: () => {
+            return import('./pages/about/about.module').then((aboutModuleFile) => aboutModuleFile.AboutModule)
+        }
+    },
+    {
         path: 'custom-components',
         loadChildren: () => {
             return import('./pages/custom-components/custom-components.module').then((customComponentsModuleFile) => customComponentsModuleFile.CustomComponentsModule)
         }
     },
     {
-        path: 'about',
+        path: 'form-composer',
         loadChildren: () => {
-            return import('./pages/about/about.module').then((aboutModuleFile) => aboutModuleFile.AboutModule)
+            return import('./pages/form-composer/form-composer.module').then((formComposerModuleFile) => formComposerModuleFile.FormComposerModule)
         }
     },
     {
