@@ -1,0 +1,9 @@
+.button {
+    width: 100%;
+}
+
+@media(min-width: 500px) {
+    .button {
+        width: auto;
+    }
+}
