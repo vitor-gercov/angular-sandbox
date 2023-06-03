@@ -27,7 +27,7 @@
 }
 
 @media(min-width: 500px) {
-    .home__introduction {
+    .home__project-introduction {
         margin-right: 25%;
     }
 
@@ -42,7 +42,7 @@
 
 @media(min-width: 700px) {
 
-    .home__introduction {
+    .home__project-introduction {
         margin-right: 50%;
     }
 }
