@@ -5,7 +5,7 @@
 .home__project-introduction {
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
 }
 
 .home__project-sections__navigator {
