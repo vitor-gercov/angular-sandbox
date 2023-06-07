@@ -1,0 +1,15 @@
+.dialog__container {
+    border: 0;
+    border-radius: 5px;
+    width: 80svw;
+}
+
+.dialog__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dialog__header__title {
+    margin: 0;
+}
