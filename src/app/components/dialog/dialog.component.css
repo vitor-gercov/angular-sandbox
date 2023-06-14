@@ -1,6 +1,9 @@
 .dialog__container {
     border: 0;
     border-radius: 5px;
+    padding: 1rem 1.5rem;
+
+    box-sizing: border-box;
     width: 80svw;
 }
 
@@ -8,6 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 1.5rem;
 }
 
 .dialog__header__title {
