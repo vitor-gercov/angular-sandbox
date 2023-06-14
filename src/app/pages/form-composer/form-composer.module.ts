@@ -6,6 +6,7 @@ import { formComposerRoutes } from './form-composer.routes';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonsModule } from 'src/app/components/buttons/buttons.module';
 import { DialogComponent } from 'src/app/components/dialog/dialog.component';
+import { InputComponent } from 'src/app/components/input/input.component';
 
 
 
@@ -18,7 +19,9 @@ import { DialogComponent } from 'src/app/components/dialog/dialog.component';
     ReactiveFormsModule,
     RouterModule.forChild(formComposerRoutes),
     ButtonsModule,
-    DialogComponent
+    ReactiveFormsModule,
+    DialogComponent,
+    InputComponent
   ]
 })
 export class FormComposerModule { }

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ButtonColors } from 'src/app/types/button-colors.type';
+import { ButtonColor } from 'src/app/types/button-color.type';
 
 @Component({
   selector: 'app-button',
@@ -7,5 +7,5 @@ import { ButtonColors } from 'src/app/types/button-colors.type';
   styleUrls: ['./button.component.css']
 })
 export class ButtonComponent {
-  @Input() color: ButtonColors = 'basic'
+  @Input() color: ButtonColor = 'basic'
 }
