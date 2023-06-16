@@ -1,10 +1,10 @@
 <h1>Gerador de formulários</h1>
 <p class="section-explanation">A ideia dessa tela é emular um gerador de formulários, podendo escolher
     diversos tipos de campos.</p>
-<app-icon-button color="accent" tooltip="adicionar novo campo" (click)="openNewFormFieldModal()">add</app-icon-button>
+<app-icon-button color="primary" tooltip="adicionar novo campo" (click)="newFieldModal.open()">add</app-icon-button>
 
-<app-dialog #newFormFieldDialog title="novo campo">
-    <form *ngIf="newFormFieldFormGroup" [formGroup]="newFormFieldFormGroup">
-        <app-input label="pergunta" formControlName="question"></app-input>
-    </form>
-</app-dialog>
+<h2>Resultado:</h2>
+
+<ng-container #formContainer></ng-container>
+
+<app-new-field-modal #newFieldModal (newFieldAdded)="renderNewField($event)"></app-new-field-modal>

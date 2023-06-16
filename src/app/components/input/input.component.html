@@ -1,4 +1,4 @@
 <mat-form-field>
     <mat-label>{{ label }}</mat-label>
-    <input matInput [placeholder]="placeholder" [(ngModel)]="value">
+    <input matInput [placeholder]="placeholder" [(ngModel)]="value" (change)="onTouched(); onChanged(value)">
 </mat-form-field>

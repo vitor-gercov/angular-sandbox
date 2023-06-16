@@ -7,12 +7,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonsModule } from 'src/app/components/buttons/buttons.module';
 import { DialogComponent } from 'src/app/components/dialog/dialog.component';
 import { InputComponent } from 'src/app/components/input/input.component';
+import { SelectComponent } from 'src/app/components/select/select.component';
+import { NewFieldModalComponent } from './components/new-field-modal/new-field-modal.component';
 
 
 
 @NgModule({
   declarations: [
-    FormComposerComponent
+    FormComposerComponent,
+    NewFieldModalComponent
   ],
   imports: [
     CommonModule,
@@ -21,7 +24,8 @@ import { InputComponent } from 'src/app/components/input/input.component';
     ButtonsModule,
     ReactiveFormsModule,
     DialogComponent,
-    InputComponent
+    InputComponent,
+    SelectComponent
   ]
 })
 export class FormComposerModule { }

@@ -1,3 +1,8 @@
 .section-explanation {
     margin-top: 3rem;
 }
+
+.ng-star-inserted {
+    display: block;
+    margin-bottom: 2rem;
+}

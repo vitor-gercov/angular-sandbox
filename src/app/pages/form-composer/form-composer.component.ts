@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { DialogComponent } from 'src/app/components/dialog/dialog.component';
+import { Component, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
+import { InputComponent } from 'src/app/components/input/input.component';
+import { SelectComponent } from 'src/app/components/select/select.component';
+import { Field } from 'src/app/types/field.type';
 
 @Component({
   selector: 'app-form-composer',
@@ -8,15 +9,25 @@ import { DialogComponent } from 'src/app/components/dialog/dialog.component';
   styleUrls: ['./form-composer.component.css']
 })
 export class FormComposerComponent {
-  @ViewChild('newFormFieldDialog') newFormFieldDialog!: DialogComponent
-  newFormFieldFormGroup!: FormGroup
+  @ViewChild('formContainer', { read: ViewContainerRef }) formContainer!: ViewContainerRef
+  components: { value: string, component: any }[] = [
+    {
+      value: 'texto',
+      component: InputComponent
+    },
+    {
+      value: 'select',
+      component: SelectComponent
+    }
+  ]
 
-  constructor(private formBuilder: FormBuilder) { }
+  renderNewField(newField: Field): void {
+    const componentToRender = this.getComponentByFieldType(newField.fieldType)
+    let componentReference = this.formContainer.createComponent(componentToRender)
+    componentReference.setInput('label', newField.question)
+  }
 
-  openNewFormFieldModal(): void {
-    this.newFormFieldFormGroup = this.formBuilder.group({
-      question: ['', [Validators.required]]
-    })
-    this.newFormFieldDialog.open()
+  getComponentByFieldType(fieldType: string) {
+    return this.components.find((component) => component.value === fieldType)?.component
   }
 }

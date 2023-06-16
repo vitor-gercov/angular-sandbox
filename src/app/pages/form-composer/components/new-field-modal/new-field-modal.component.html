@@ -1,0 +1,14 @@
+<app-dialog #newFieldDialog title="novo campo">
+    <form *ngIf="newFieldFormGroup" [formGroup]="newFieldFormGroup">
+        <app-input label="pergunta" formControlName="question"></app-input>
+        <span *ngIf="formSubmitted && newFieldFormGroup.controls['question'].hasError('required')"
+            class="error-message">
+            o campo pergunta é obrigatório
+        </span>
+        <app-select label="tipo de campo" [selectOptions]="selectOptions" formControlName="fieldType"></app-select>
+    </form>
+    <footer class="new-field-modal__footer">
+        <app-stroked-button (click)="newFieldDialog.close()">cancelar</app-stroked-button>
+        <app-button color="primary" (click)="addNewField()">criar</app-button>
+    </footer>
+</app-dialog>
