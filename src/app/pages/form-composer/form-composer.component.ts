@@ -1,4 +1,5 @@
 import { Component, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
+import { ButtonComponent } from 'src/app/components/buttons/button/button.component';
 import { InputComponent } from 'src/app/components/input/input.component';
 import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
 import { SelectComponent } from 'src/app/components/select/select.component';
@@ -24,6 +25,10 @@ export class FormComposerComponent {
       value: 'navbar',
       component: NavbarComponent
     },
+    {
+      value: 'button',
+      component: ButtonComponent
+    }
   ]
 
   renderNewField(newField: Field): void {
