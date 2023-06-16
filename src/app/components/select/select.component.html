@@ -1,7 +1,6 @@
 <mat-form-field>
     <mat-label>{{label}}</mat-label>
-    <select matNativeControl [(ngModel)]="value">
-        <option *ngIf="placeholder" [label]="placeholder"></option>
+    <select matNativeControl [(ngModel)]="value" (change)="onChanged(value); onTouched()">
         <option *ngFor="let selectOption of selectOptions" [value]="selectOption.value">
             {{selectOption.description}}
         </option>

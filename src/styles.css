@@ -14,3 +14,11 @@ p {
     font-size: 1.2rem;
     line-height: 2rem;
 }
+
+.error-message {
+    font-size: 0.9rem;
+    color: rgb(139, 0, 0);
+    font-weight: bold;
+
+    display: inline-block;
+}

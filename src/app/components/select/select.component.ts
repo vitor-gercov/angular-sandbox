@@ -4,6 +4,7 @@ import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/f
 import { MatSelectModule } from '@angular/material/select';
 import { SelectOptions } from 'src/app/types';
 import { StringHelperService } from 'src/app/services';
+import { MatInputModule } from '@angular/material/input';
 
 @Component({
   selector: 'app-select',
@@ -11,7 +12,8 @@ import { StringHelperService } from 'src/app/services';
   imports: [
     CommonModule,
     FormsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatInputModule
   ],
   templateUrl: './select.component.html',
   styleUrls: ['./select.component.css'],
