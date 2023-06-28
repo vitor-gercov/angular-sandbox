@@ -9,25 +9,9 @@ import { Field } from 'src/app/types/field.type';
   styleUrls: ['./form-composer.component.css']
 })
 export class FormComposerComponent {
-  @ViewChild('formContainer', { read: ViewContainerRef }) formContainer!: ViewContainerRef
-  components: { value: string, component: any }[] = [
-    {
-      value: 'texto',
-      component: InputComponent
-    },
-    {
-      value: 'select',
-      component: SelectComponent
-    }
-  ]
+  fields: Field[] = []
 
-  renderNewField(newField: Field): void {
-    const componentToRender = this.getComponentByFieldType(newField.fieldType)
-    let componentReference = this.formContainer.createComponent(componentToRender)
-    componentReference.setInput('label', newField.question)
-  }
-
-  getComponentByFieldType(fieldType: string) {
-    return this.components.find((component) => component.value === fieldType)?.component
+  addField(field: Field): void {
+    this.fields.push(field)
   }
 }

@@ -1,0 +1,14 @@
+<app-dialog #editFieldDialog title="editar campo">
+    <form *ngIf="editFieldFormGroup" [formGroup]="editFieldFormGroup">
+        <app-input label="pergunta" formControlName="question"></app-input>
+        <span *ngIf="formSubmitted && editFieldFormGroup.controls['question'].hasError('required')"
+            class="error-message">
+            o campo pergunta é obrigatório
+        </span>
+        <app-select label="tipo de campo" [selectOptions]="selectOptions" formControlName="fieldType"></app-select>
+    </form>
+    <footer class="edit-field-modal__footer">
+        <app-stroked-button (click)="editFieldDialog.close()">cancelar</app-stroked-button>
+        <app-button color="primary" (click)="editField()">editar</app-button>
+    </footer>
+</app-dialog>

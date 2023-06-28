@@ -1,0 +1,6 @@
+<div *ngIf="field" class="field-container">
+    <ng-container #fieldContainer></ng-container>
+    <app-icon-button color="accent" tooltip="editar campo" (click)="editFieldModal.open()">edit</app-icon-button>
+</div>
+
+<app-edit-field-modal #editFieldModal [field]="field" (fieldEdited)="editField($event)"></app-edit-field-modal>

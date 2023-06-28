@@ -5,6 +5,8 @@
 
 <h2>Resultado:</h2>
 
-<ng-container #formContainer></ng-container>
+<ng-container *ngFor="let field of fields">
+    <app-field-container [field]="field"></app-field-container>
+</ng-container>
 
-<app-new-field-modal #newFieldModal (newFieldAdded)="renderNewField($event)"></app-new-field-modal>
+<app-new-field-modal #newFieldModal (newFieldAdded)="addField($event)"></app-new-field-modal>
