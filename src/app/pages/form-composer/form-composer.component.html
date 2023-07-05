@@ -2,11 +2,9 @@
 <p class="section-explanation">A ideia dessa tela é emular um gerador de formulários, podendo escolher
     diversos tipos de campos.</p>
 <app-icon-button color="primary" tooltip="adicionar novo campo" (click)="newFieldModal.open()">add</app-icon-button>
-
+<app-new-field-modal #newFieldModal (newFieldAdded)="addField($event)"></app-new-field-modal>
 <h2>Resultado:</h2>
 
 <ng-container *ngFor="let field of fields">
     <app-field-container [field]="field"></app-field-container>
 </ng-container>
-
-<app-new-field-modal #newFieldModal (newFieldAdded)="addField($event)"></app-new-field-modal>

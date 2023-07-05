@@ -3,3 +3,12 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.field-container__options {
+    display: flex;
+    margin-left: 1rem;
+}
+
+::ng-deep app-input {
+    flex-grow: 1;
+}

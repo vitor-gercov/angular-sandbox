@@ -11,7 +11,9 @@ import { SelectComponent } from 'src/app/components/select/select.component';
 import { NewFieldModalComponent } from './components/new-field-modal/new-field-modal.component';
 import { EditFieldModalComponent } from './components/edit-field-modal/edit-field-modal.component';
 import { FieldContainerComponent } from './components/field-container/field-container.component';
-
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -29,7 +31,10 @@ import { FieldContainerComponent } from './components/field-container/field-cont
     ReactiveFormsModule,
     DialogComponent,
     InputComponent,
-    SelectComponent
+    SelectComponent,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
   ]
 })
 export class FormComposerModule { }
