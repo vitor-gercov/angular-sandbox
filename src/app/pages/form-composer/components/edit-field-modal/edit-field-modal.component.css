@@ -1,0 +1,19 @@
+app-input {
+    display: block;
+    margin-top: 2rem;
+}
+
+app-select {
+    display: block;
+    margin-top: 2rem;
+}
+
+.edit-field-modal__footer {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: end;
+
+    >*:last-child {
+        margin-left: 1rem;
+    }
+}

@@ -9,13 +9,19 @@ import { DialogComponent } from 'src/app/components/dialog/dialog.component';
 import { InputComponent } from 'src/app/components/input/input.component';
 import { SelectComponent } from 'src/app/components/select/select.component';
 import { NewFieldModalComponent } from './components/new-field-modal/new-field-modal.component';
-
+import { EditFieldModalComponent } from './components/edit-field-modal/edit-field-modal.component';
+import { FieldContainerComponent } from './components/field-container/field-container.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
   declarations: [
     FormComposerComponent,
-    NewFieldModalComponent
+    NewFieldModalComponent,
+    EditFieldModalComponent,
+    FieldContainerComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +31,10 @@ import { NewFieldModalComponent } from './components/new-field-modal/new-field-m
     ReactiveFormsModule,
     DialogComponent,
     InputComponent,
-    SelectComponent
+    SelectComponent,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
   ]
 })
 export class FormComposerModule { }
